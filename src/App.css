@@ -1,0 +1,94 @@
+import React, { useState, useEffect } from "react";
+import {
+  Cpu,
+  Code,
+  ArrowRight,
+  Zap,
+  Menu,
+  X,
+  Bot,
+  Smartphone,
+  MessageCircle,
+  Calculator,
+  Rocket,
+  ShieldCheck,
+  Search,
+  Send,
+  Layers,
+  CheckCircle
+} from "lucide-react";
+  {
+    id: 2,
+    title: "Bluetooth Jammer",
+    category: "Communication Systems",
+    price: 2500,
+    image: "/projects/bluetooth-jamer.jpeg",
+    description: "A communication-systems demonstration project.",
+    technology: "Communication Systems, Electronics"
+  },
+  {
+    id: 3,
+    title: "Smart Health Monitoring System",
+    category: "IoT & Healthcare",
+    price: 3000,
+    image: "/projects/health-monitoring-system.jpeg",
+    description: "An IoT-based healthcare monitoring project.",
+    technology: "ESP32, Sensors, IoT"
+  },
+  {
+    id: 4,
+    title: "LoRa Communication Board",
+    category: "Wireless Communication",
+    price: 2000,
+    image: "/projects/lora-communication-board-1.jpeg",
+    description: "A wireless communication project using LoRa technology.",
+    technology: "LoRa, Embedded Systems"
+  },
+  {
+    id: 5,
+    title: "Smart Traffic Management",
+    category: "IoT & Embedded Systems",
+    price: 3000,
+    image: "/projects/smart-traffic-sysrem.jpeg",
+    description: "An intelligent traffic management prototype.",
+    technology: "Arduino, Sensors, Embedded Systems"
+  },
+  {
+    id: 6,
+    title: "Smart Weather Monitoring",
+    category: "IoT & Sensors",
+    price: 2000,
+    image: "/projects/smart-weather-monitoring-system.jpeg",
+    description: "A smart weather monitoring system using sensors.",
+    technology: "ESP32, Sensors, IoT"
+  },
+  {
+    id: 7,
+    title: "Smart Workbench ESP32",
+    category: "Embedded Systems",
+    price: 2500,
+    image: "/projects/smart-workbench-esp32.jpeg",
+    description: "An ESP32-based smart workbench prototype.",
+    technology: "ESP32, Embedded Systems"
+  }
+];
+
+const whatsappNumber = "919963047203";
+
+const API_URL = "http://localhost:8000";
+
+function App() {
+  const [projects, setProjects] = useState([]);
+  const [projectsLoading, setProjectsLoading] = useState(true);
+  const [projectsError, setProjectsError] = useState("");
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [projectType, setProjectType] = useState("Electronics Project");
+  const [budget, setBudget] = useState("2000");
+  const [customerName, setCustomerName] = useState("");
+  const [customerMessage, setCustomerMessage] = useState("");
+  
